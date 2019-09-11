@@ -1,0 +1,215 @@
+body {
+    background: gainsboro;
+    font-family: Overpass, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
+}
+
+/* 版心公用 */
+.container-md {
+    width: 1040px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header-wrap {
+    position: relative;
+}
+
+.logo {
+    float: left;
+    width: 100px;
+    height: 37px;
+    padding-top: 22px;
+}
+
+.nav {
+    float: right;
+}
+
+.nav li {
+    float: left;
+    line-height: 80px;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav li a {
+    color: #fff;
+    padding: 0 20px;
+
+}
+
+.layer {
+    display: none;
+    width: 240px;
+    height: 204px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+
+.layer::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -14px;
+    left: 30px;
+}
+
+.nav li:hover .layer {
+    display: block;
+}
+
+/* header-txt */
+.header-txt {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -72px;
+    z-index: 99;
+}
+
+.font-logo {
+    font-size: 67px;
+    line-height: 1;
+    /* 行高不带单位表示字体的倍数 */
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.use-btn {
+    display: inline-block;
+    padding: 14px 26px;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    border-radius: 6px;
+}
+
+/* 轮播图 */
+.swiper-slide img {
+    width: 100%;
+}
+
+/* 新闻广告 */
+.news-ad {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+    font-size: 0;
+}
+
+.news-ad .news {
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 18px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #ec614f 0%, #ff2e2e 100%);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2)
+}
+
+.news-ad a {
+    color: #fff;
+}
+
+.headline-text {
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* 广告图片 */
+.heros {
+    margin-left: -3px;
+    border-top: 3px;
+}
+
+.hero {
+    float: left;
+    width: 25%;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    padding-top: 37px;
+    box-sizing: border-box;
+    border-left: 2px solid #fff;
+}
+
+.meta-links {
+    padding: 40px 0;
+    width: 33.33%;
+    float: left;
+}
+
+.meta-links .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.meta-links .txt {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+
+}
+
+.meta-links:nth-child(2) {
+    text-align: center;
+}
+
+.meta-links:nth-child(3) {
+    text-align: right;
+}
+
+/* Pad适配 */
+@media screen and (max-width:1080px) {
+.container-md{width:100%;box-sizing: border-box;}
+.nav{display: none}
+.hero{width: 50%;margin-bottom: 2px}
+}
+
+/* 手机端适配 */
+@media screen and (max-width:640px) {
+.font-logo{font-size: 45px;}
+.swiper-slide img{height: 546px;}
+.header-txt{width: 80%;margin-left: 8px;}
+.news-ad .news{vertical-align: 14px;}
+.hero{width: 100%;}
+.meta-links{width: 100%;padding: 20px 0}
+.meta-links:nth-child(2){text-align: left;}
+.meta-links:nth-child(3){text-align: left;}
+}
